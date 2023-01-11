@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\BestellenController;
 use App\Http\Controllers\PersonController;
+use App\Http\Controllers\PizzaController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use App\Models\Person;
@@ -34,7 +34,7 @@ use Spatie\Permission\Models\Role;
 Route::get('/', function () {
     return view('Home.index');
 });
-Route::resource('Bestellen', BestellenController::class);
+Route::resource('Bestellen', PizzaController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

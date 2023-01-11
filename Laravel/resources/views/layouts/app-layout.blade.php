@@ -9,7 +9,7 @@
     <title>Stonks Pizza</title>
 </head>
 
-<body class="min-h-screen bg-slate-200">
+<body class="min-h-screen bg-gray-500">
     @yield('content')
 </body>
 

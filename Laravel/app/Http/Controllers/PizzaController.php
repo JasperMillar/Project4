@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Bestellen;
+use App\Models\Pizza;
 use Illuminate\Http\Request;
 
-class BestellenController extends Controller
+class PizzaController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class BestellenController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Bestellen  $bestellen
+     * @param  \App\Models\Pizza  $pizza
      * @return \Illuminate\Http\Response
      */
-    public function show(Bestellen $bestellen)
+    public function show(Pizza $pizza)
     {
         //
     }
@@ -52,10 +52,10 @@ class BestellenController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Bestellen  $bestellen
+     * @param  \App\Models\Pizza  $pizza
      * @return \Illuminate\Http\Response
      */
-    public function edit(Bestellen $bestellen)
+    public function edit(Pizza $pizza)
     {
         //
     }
@@ -64,10 +64,10 @@ class BestellenController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Bestellen  $bestellen
+     * @param  \App\Models\Pizza  $pizza
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Bestellen $bestellen)
+    public function update(Request $request, Pizza $pizza)
     {
         //
     }
@@ -75,10 +75,10 @@ class BestellenController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Bestellen  $bestellen
+     * @param  \App\Models\Pizza  $pizza
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Bestellen $bestellen)
+    public function destroy(Pizza $pizza)
     {
         //
     }
