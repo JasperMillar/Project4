@@ -28,15 +28,5 @@ class PersonSeeder extends Seeder
         $email = "admin@localhost";
         $user = User::factory(['name' => $first, 'email' => $email])->create();
         $user->assignRole('admin');
-        Person::factory(['first_name' => $first, 'last_name' => $last, 'id' => $user->id])->create();
-
-        $roles = ['balie', 'bereiding', 'bezorger', 'management'];
-
-        for($i = 0; $i < 500; $i++) {
-            $person = Person::factory()->create();
-            // the role "klant" is the default role with 90% chance
-            $role = fake()->optional($weight = 0.1, $default = 'klant')->randomElement($roles);
-            $person->user()->first()->assignRole($role);
-        }
     }
 }

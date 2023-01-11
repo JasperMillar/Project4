@@ -15,6 +15,6 @@ class PizzaPointSeeder extends Seeder
      */
     public function run()
     {
-        PizzaPoint::factory(500)->create();
+
     }
 }
