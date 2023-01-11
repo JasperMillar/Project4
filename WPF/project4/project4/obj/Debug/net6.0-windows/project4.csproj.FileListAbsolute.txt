@@ -1,0 +1,7 @@
+C:\Users\iwanb\OneDrive\Bureaublad\school\visual code\project4\project4\obj\Debug\net6.0-windows\project4.csproj.AssemblyReference.cache
+C:\Users\iwanb\OneDrive\Bureaublad\school\visual code\project4\project4\obj\Debug\net6.0-windows\MainWindow.g.cs
+C:\Users\iwanb\OneDrive\Bureaublad\school\visual code\project4\project4\obj\Debug\net6.0-windows\App.g.cs
+C:\Users\iwanb\OneDrive\Bureaublad\school\visual code\project4\project4\obj\Debug\net6.0-windows\project4_MarkupCompile.cache
+C:\Users\iwanb\OneDrive\Bureaublad\school\visual code\project4\project4\obj\Debug\net6.0-windows\project4_MarkupCompile.lref
+C:\Users\iwanb\OneDrive\Bureaublad\school\visual code\project4\project4\obj\Debug\net6.0-windows\createpizza.g.cs
+C:\Users\iwanb\OneDrive\Bureaublad\school\visual code\project4\project4\obj\Debug\net6.0-windows\editpizza.g.cs
