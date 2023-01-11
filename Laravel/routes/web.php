@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BestellenController;
 use App\Http\Controllers\PersonController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
@@ -22,13 +23,18 @@ use Spatie\Permission\Models\Role;
 |
 */
 
+// Route::get('/', function () {
+//     // a product-list component is used in the welcome view (and in the dashboard view)
+//     // the component is defined in app\View\Components\ProductList.php
+//     // the component is rendered in the welcome view with the following line:
+//     // <x-product-list />
+//     return view('welcome', ['products' => ['pizza', 'pasta', 'salad', 'dessert', 'drinks']]);
+// });
+
 Route::get('/', function () {
-    // a product-list component is used in the welcome view (and in the dashboard view)
-    // the component is defined in app\View\Components\ProductList.php
-    // the component is rendered in the welcome view with the following line:
-    // <x-product-list />
-    return view('welcome', ['products' => ['pizza', 'pasta', 'salad', 'dessert', 'drinks']]);
+    return view('Home.index');
 });
+Route::resource('Bestellen', BestellenController::class);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
