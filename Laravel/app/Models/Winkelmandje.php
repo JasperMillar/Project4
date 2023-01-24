@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Pizza extends Model
+class Winkelmandje extends Model
 {
     use HasFactory;
 
@@ -14,6 +14,6 @@ class Pizza extends Model
         'pizzasoort',
         'toppings',
         'prijs',
-        'image',
+        'groote',
     ];
 }
