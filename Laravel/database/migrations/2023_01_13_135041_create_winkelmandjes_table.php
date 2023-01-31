@@ -17,8 +17,8 @@ return new class extends Migration
             $table->id();
             $table->string('pizzasoort');
             $table->string('toppings');
-            $table->integer('prijs');
-            $table->integer('groote');
+            $table->decimal('prijs');
+            $table->decimal('groote');
             $table->timestamps();
         });
     }

@@ -20,13 +20,13 @@
                         <input type="hidden" value="{{ $pizza->pizzasoort }}" name="pizzasoort">
                         <input type="hidden" value="{{ $pizza->toppings }}" name="toppings">
                         <input type="hidden" value="{{ $pizza->prijs }}" name="prijs">
-                        <label>Klein</label>
+                        <label>Klein 20cm</label>
                         <input type="radio" name="groote" value=0.8>
                         <br>
-                        <label>Medium</label>
+                        <label>Medium 25cm</label>
                         <input type="radio" name="groote" value=1 checked>
                         <br>
-                        <label>Groot</label>
+                        <label>Groot 30cm</label>
                         <input type="radio" name="groote" value=1.2>
                         <br>
                         <button class="px-4 py-2 text-white bg-blue-800 rounded">toevoegen</button>

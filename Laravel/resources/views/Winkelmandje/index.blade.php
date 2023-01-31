@@ -2,7 +2,7 @@
 @extends('layouts.nav')
 @section('content')
           <main class="my-8">
-            <div class="container px-6 mx-auto">
+            <div class="container px-6 mx-auto  pt-[70px]">
                 <div class="flex justify-center my-6">
                     <div class="flex flex-col w-full p-8 text-gray-800 bg-white shadow-lg pin-r pin-y md:w-4/5 lg:w-4/5">
                       @if ($message = Session::get('success'))
@@ -10,29 +10,54 @@
                               <p class="text-green-800">{{ $message }}</p>
                           </div>
                       @endif
-                        <h3 class="text-3xl text-bold">Winkelmandje Lijst</h3>
+                        <h3 class="text-3xl text-bold">Winkelmandje</h3>
                       <div class="flex-1">
+                        @php
+                            $totaal = 0;
+                        @endphp
                         <table class="w-full text-sm lg:text-base" cellspacing="0">
                           <thead>
                             <tr class="h-12 uppercase">
                               <th class="text-left">Name</th>
-                              <th class="hidden text-right md:table-cell"> price</th>
-                              <th class="hidden text-right md:table-cell"> Remove </th>
+                              <th class="hidden text-right md:table-cell"> Groote</th>
+                              <th class="hidden text-right md:table-cell"> Prijs</th>
+                              <th class="hidden text-right md:table-cell"> Verwijder </th>
                             </tr>
                           </thead>
                           <tbody>
                               @foreach ($winkelmandjes as $item)
                             <tr>
-                              <td>
-                                <a href="#">
-                                  <p class="mb-2 md:ml-4">{{ $item->pizzasoort }}</p>
-                                </a>
-                            </td>
-                              <td class="hidden text-right md:table-cell">
-                                <span class="text-sm font-medium lg:text-base">
-                                    ${{ $item->prijs }}
-                                </span>
-                              </td>
+                                <td>
+                                    <a href="#">
+                                    <p class="mb-2 md:ml-4">{{ $item->pizzasoort }}</p>
+                                    </a>
+                                </td>
+                                @php
+                                    if ( $item->groote == 0.8) {
+                                        $uitslag = "Klein";
+                                    }
+                                    else if ( $item->groote == 1) {
+                                        $uitslag = "Medium";
+                                    }
+                                    else if ( $item->groote == 1.2) {
+                                        $uitslag = "Groot";
+                                    }
+
+                                    $Prijs = $item->prijs;
+                                    $Groote = $item->groote;
+                                    $totaalItem = $Prijs*$Groote;
+                                    $totaal+=$totaalItem;
+                                @endphp
+                                <td class="hidden text-right md:table-cell">
+                                    <span class="text-sm font-medium lg:text-base">
+                                        {{ $uitslag }}
+                                    </span>
+                                </td>
+                                <td class="hidden text-right md:table-cell">
+                                    <span class="text-sm font-medium lg:text-base">
+                                        ${{ $totaalItem }}
+                                    </span>
+                                </td>
 
                               <td class="hidden text-right md:table-cell">
                                 <form action="{{ route('Winkelmandje.destroy', [$item->id]) }}" method="POST">
@@ -44,9 +69,9 @@
                               </td>
                             </tr>
                             @endforeach
-
                           </tbody>
                         </table>
+                        {{$totaal}}
                       </div>
                     </div>
                   </div>
